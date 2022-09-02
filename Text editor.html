@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text editor</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="Text editor.css">
+	<script src="https://cdn.tiny.cloud/1/5rocmwv68b30d4vhwq3mjck4l74kpjz8ie29g1hgvspv2qgf/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+	   <script>
+      tinymce.init({
+        selector: '#textarea',
+        plugins: [
+          'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
+          'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+          'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount'
+        ],
+        toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+          'alignleft aligncenter alignright alignjustify | ' +
+          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+      });
+    </script>
+
+</head>
+<body>
+    <div class="container">		
+       <form method="post">
+        <textarea name="textarea" id="textarea" cols="100" rows="15" class="input" placeholder="Write A Note..."></textarea>
+  </form>
+    </div>
+   <!-- <script src="Text editor.js"></script>-->
+</body>
+</html>
